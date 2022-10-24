@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-
+import { normalize } from 'styled-normalize';
 
 export const GlobalStyle = createGlobalStyle`
+${normalize}
+
 *,
 *::before,
 *::after {
@@ -10,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  font-family: "Pangolin", sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   background-color: ${p => p.theme.colors.background};
   color: ${p => p.theme.colors.text};
